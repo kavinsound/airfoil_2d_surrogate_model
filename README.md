@@ -33,7 +33,7 @@ The model converges rapidly within the first 3 epochs due to the smooth, continu
       <br><i>Figure 1: Refined O-grid boundary layer mesh tracking airfoil structural curvature.</i>
     </td>
     <td align="center" width="33%">
-      <b>Velocity Visualization ($U$)</b><br>
+      <b>Velocity Visualization (<code>U</code>)</b><br>
       <img src="pics/airfoil_pic_2.png" alt="Velocity Field Contour" width="100%">
       <br><i>Figure 2: Global velocity magnitude contours across the steady laminar flow envelope.</i>
     </td>
