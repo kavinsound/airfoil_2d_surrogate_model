@@ -55,23 +55,25 @@ The model converges rapidly within the first 3 epochs due to the smooth, continu
 </p>
 
 
+```text
+.
 ├── airfoil_scraping_scripts/   # Scripts for automated geometry acquisition
 ├── cleaned_foils/              # Preprocessed and normalized airfoil profile coordinates
 ├── template_case/              # Base CFD case files (boundary conditions, solver settings)
 ├── nn_model/                   # PyTorch neural network architecture and training logs
-|
+│
 ├── case_generator.py           # Automates CFD case setup for varying Alpha and Re variations
 ├── stl_creator.py              # Generates 3D/2D STL surface meshes from airfoil coordinates
 ├── mesh_cases.py               # Handles automated mesh generation and quality checks
-|
+│
 ├── master_runner.slurm         # Core cluster job scheduling script for parallel CFD execution
 ├── start.slurm                 # Initialization script for HPC batch submission
 ├── generate_next_batch.py      # Active batch manager for step-wise data generation
-|
+│
 ├── data_reader.py              # Pipeline to parse, clean, and format simulation logs
 ├── sim_data.csv                # Aggregated dataset containing compiled CD and CL targets
 ├── diagnose.ipynb              # Notebook for error analysis and model validation
-|
+│
 ├── status.json                 # Real-time state tracking file for active pipeline runs
 ├── updateStatus.py             # Script monitoring simulation convergence and run status
 └── RESET.py                    # Recovery script to safely clear cache and reset pipeline states
