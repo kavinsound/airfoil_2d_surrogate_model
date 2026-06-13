@@ -16,6 +16,16 @@ An end-to-end Machine Learning surrogate model designed to accelerate aerodynami
 
 ---
 
+## ⚙️ HPC Automation Framework (2,000+ Case Pipeline)
+
+To compile the dense training matrix required for the neural network, the project features a custom, autonomous MLOps pipeline designed to bypass manual GUI constraints:
+
+1. **Parametric Setup (`case_generator.py`):** Automatically sweeps the entire multi-dimensional fluid envelope, configuring boundary conditions, velocities, and angles for over 2,000 combinations.
+2. **Algorithmic Grid Generation (`stl_creator.py` & `mesh_cases.py`):** Translates raw scraped coordinates into clean mathematical boundaries, generating structured O-grid meshes with extreme boundary layer refinement across varied airfoil silhouettes.
+3. **Cluster Orchestration (`master_runner.slurm` & `generate_next_batch.py`):** Interfaces with a Slurm workload manager to dynamically queue, dispatch, monitor, and scale batch simulations in parallel across cluster compute nodes. State-tracking is handled actively via `status.json`.
+
+---
+
 ## 📈 Training Convergence
 
 The model converges rapidly within the first 3 epochs due to the smooth, continuous nature of laminar fluid dynamics. Evaluation loss tracks seamlessly with training loss, demonstrating robust generalization across unseen test coordinates without overfitting.
