@@ -1,0 +1,7 @@
+airfoil_scraping_scripts/
+.venv/
+__pycache__/
+.envrc
+diagnose.ipynb
+todo.md
+ignore.txt
